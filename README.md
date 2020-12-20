@@ -1,7 +1,11 @@
 # covid19-statistics
 Project repository for DB classes. 
 
-<div align = center><b>GUIDE FOR SSH TUNNEL</b></div>
+## Known unresolved questions
+- [ ] Decide on APIs being used and add them to the README
+- [ ] Decide on how React is going to get its data: via *Python API* or *React Connector* 
+
+## Guide for SSH tunnel
 1. PyCharm Professional is needed 
 </br>
 2. Go to View > Tool Windows > Database.
