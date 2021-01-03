@@ -79,3 +79,48 @@ PS C:\nvm> nvm ls
 PS C:\WINDOWS\system32> node --version
 v10.21.0
 ```
+
+10. Make sure that nvm commands works both on PowerShell, cmd and Linux Terminal. Sometimes, nvm reinstallation may be required.
+
+
+### Frontend - ReactJS
+```powershell
+PS Success! Created frontend at C:\Dev\covid19-statistics\frontend
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd frontend
+  npm start
+```
+
+```powershell
+PS C:\Dev\covid19-statistics\frontend> npm start
+```
+
+Starting the developement server:
+
+```node
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+```
