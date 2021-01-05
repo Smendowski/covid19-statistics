@@ -8,5 +8,6 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
+  // root is located in the index.html file in public directory
 );
 

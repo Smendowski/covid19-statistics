@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Ignore nodeJS modules
+frontend/node_modules/*
+
+# Ignore cache file
+frontend/.eslintcache
