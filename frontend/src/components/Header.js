@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+    color: "#F1A961",
     [theme.breakpoints.down("xs")]:{
         flexGrow: 1,
-        float: 'none'
+        float: 'none',
     }
   },
   headerOptions: {
@@ -31,10 +32,11 @@ const useStyles = makeStyles((theme) => ({
   headerItem: {
       padding: 10,
       float: 'left',
-      marginLeft: 10
+      marginLeft: 10,
+      marginBottom: '30px'
   },
   navbar: {
-      backgroundColor: '#868B8E',
+      backgroundColor: '#0E0E0E',
   }
 }));
 

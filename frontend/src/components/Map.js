@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         marginLeft: 'auto',
         marginRight: 'auto',
+        border: "0",
     }
 }));
 

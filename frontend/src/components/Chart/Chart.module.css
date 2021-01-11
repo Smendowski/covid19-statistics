@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+
+@media (max-width: 770px){
+  .container{
+    width: 100%;
+  }
+}
