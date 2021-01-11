@@ -1,0 +1,13 @@
+body{
+  background-color: #B9B7BD;
+}
+
+.App {
+  text-align: center;
+}
+
+.image{
+  width: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
