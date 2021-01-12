@@ -1,0 +1,6 @@
+mysql
+requests
+pprint
+xonfig
+mysql-connector-python
+flask
