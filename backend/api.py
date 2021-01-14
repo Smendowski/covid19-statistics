@@ -4,7 +4,7 @@ import flask
 import json
 import mysql.connector
 import requests
-from backend import config
+import config
 from flask import request, jsonify
 
 

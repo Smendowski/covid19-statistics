@@ -10,6 +10,7 @@ cnx = mysql.connector.connect(user=config.mysql["user"], port=config.mysql["port
 curs = cnx.cursor()
 curs_2 = cnx.cursor()
 
+
 if config.update["countries"]:
     r = requests.get('https://corona.lmao.ninja/v2/countries?yesterday&sort').json()
     sql = "insert into countries (country, code) values (%s, %s);"
@@ -162,14 +163,15 @@ if config.update["update"]:
             pprint(sql_upd_reg % val)
             curs.execute(sql_upd_reg, val)
 
-    #cnx.commit()
+    cnx.commit()
     time.sleep(10)
     for region in r:
         val = (region['cases'], region['deaths'], region['recovered'], region['critical'], region['tests'],
                region['country'])
         curs_2.execute(sql_upd_country, val)
-    #cnx.commit()
+    cnx.commit()
 
+    curs_add = cnx.cursor()
 
     resp = requests.get('https://disease.sh/v3/covid-19/historical?lastdays=1').json()
     pprint(len(resp))
@@ -191,7 +193,7 @@ if config.update["update"]:
                     val = (reg["country"], 1, reg["timeline"]["cases"][date], reg["timeline"]["deaths"][date],
                            reg["timeline"]["recovered"][str(date)], date, '%c/%e/%y')
                 pprint(sql_ins % val)
-                curs.execute(sql_ins, val)
+                curs_add.execute(sql_ins, val)
 
         else:
             for date in reg["timeline"]["cases"]:
@@ -205,6 +207,6 @@ if config.update["update"]:
                     val = (reg["province"], 0, reg["timeline"]["cases"][date], reg["timeline"]["deaths"][date],
                            reg["timeline"]["recovered"][date], date, '%c/%e/%y')
                 pprint(val)
-                curs.execute(sql_ins, val)
+                curs_add.execute(sql_ins, val)
 
-    #cnx.commit()
+    cnx.commit()
