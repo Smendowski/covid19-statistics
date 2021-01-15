@@ -1,22 +1,17 @@
 [
   {
-    "url-endpoint" : "https://corona.lmao.ninja/v2/jhucsse",
+    "url-endpoint" : "https://corona.lmao.ninja/v3/jhucsse",
     "description": "Data from Johns Hopkins University: 191 countries, region granularity, best location accuracy both for countries and its regions.",
     "tags" : ["coordinates", "regions"]
   },
   {
-    "url-endpoint" : "https://corona.lmao.ninja/v2/countries",
+    "url-endpoint" : "https://corona.lmao.ninja/v3/countries",
     "description": "API provided by Worldomaters, it offers 220 countries with extended data on their codes.",
     "tags" : ["countries", "country-codes"]
   },
   {
-    "url-endpoint" : "https://corona.lmao.ninja/v2/jhucsse",
-    "description": "Data from Johns Hopkins University: 191 countries, region granularity, best location accuracy both for countries and its regions",
-    "tags" : ["coordinates", "regions"]
-  },
-  {
     "url-endpoint" : "https://disease.sh/v3/covid-19/all",
-    "description": "Consistent data on number of statistics as a summary for the state of the pandemic in the world.",
+    "description": "Consistent data on number of statistics as a summary for state of the pandemic.",
     "tags" : ["world", "summary"]
   }
 ]
