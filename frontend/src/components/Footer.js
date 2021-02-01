@@ -55,7 +55,7 @@ const Footer = () => {
               href="https://github.com/Smendowski"> Smendowski</Link>
             &nbsp;
             <Link className={classes.gitHubLink} color="inherit" 
-              href="https://github.com/mmuravytskyi"> Muravytsky</Link>
+              href="https://github.com/mmuravytskyi"> Muravytskyi</Link>
             &nbsp;
             <Link className={classes.gitHubLink}  color="inherit" 
               href="https://github.com/KrzysztofSkos"> Skoś</Link>
