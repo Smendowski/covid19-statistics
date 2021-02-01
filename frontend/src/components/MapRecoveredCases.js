@@ -5,20 +5,21 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     map: {
         width: '99vw',
-        height: '90vh',
+        height: '70vh',
         position: 'absolute',
         marginLeft: 'auto',
         marginRight: 'auto',
         border: "0",
-        float: 'left'
     }
 }));
 
-const Graphs = () => {
+const MapRecoveredCases = () => {
     const classes = useStyles();
-    return <div>
-        
+    return <div >
+        <Iframe className={classes.map}
+            src="http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=Poland&var-is_admin=false&from=1580571758022&to=1612194158022&panelId=12"
+        />
     </div>
 };
 
-export default Graphs;
+export default MapRecoveredCases;

@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './components/Header.js'
-import Map from "./components/Map.js"
+import MapTotalCases from "./components/MapTotalCases.js"
+import MapActiveCases from "./components/MapActiveCases.js"
 import Home from "./components/Home.js"
 import Footer from "./components/Footer.js"
 import Graphs from "./components/Graphs.js"
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import MapRecoveredCases from './components/MapRecoveredCases.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +24,9 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact from="/" render={props => <Home {...props} />} />
-            <Route exact from="/global-map" render={props => <Map {...props} />} />
+            <Route exact from="/global-map-total-cases" render={props => <MapTotalCases {...props} />} />
+            <Route exact from="/global-map-active-cases" render={props => <MapActiveCases {...props} />} />
+            <Route exact from="/global-map-recovered-cases" render={props => <MapRecoveredCases {...props} />} />
             <Route exact from="/graphs" render={props => <Graphs {...props} />} />
           </Switch>
           <Footer />

@@ -107,14 +107,18 @@ const Header = props => {
                      open={open}
                      onClose={() => setAnchorEl(null)}
                      >
-                     <MenuItem onClick={() => handleMenuClick('/global-map')}>Map</MenuItem>
+                     <MenuItem onClick={() => handleMenuClick('/global-map-total-cases')}>Total</MenuItem>
+                     <MenuItem onClick={() => handleMenuClick('/global-map-active-cases')}>Active</MenuItem>
+                     <MenuItem onClick={() => handleMenuClick('/global-map-recovered')}>Recovered</MenuItem>
                      <MenuItem onClick={() => handleMenuClick('/graphs')}>Graphs</MenuItem>
                     </Menu>
                 </>
               ) : (
                 <div className={classes.headerOptions}>
                     <div className={classes.headerItem}>
-                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/global-map')}>Map</Button>
+                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/global-map-total-cases')}>Total</Button>
+                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/global-map-active-cases')}>Active</Button>
+                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/global-map-recovered-cases')}>Recovered</Button>
                         <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/graphs')}>Graphs</Button>
                     </div>
                 </div>

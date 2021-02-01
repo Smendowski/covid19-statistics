@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     map: {
         width: '99vw',
-        height: '90vh',
+        height: '70vh',
         position: 'absolute',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Map = () => {
+const MapTotalCases = () => {
     const classes = useStyles();
     return <div>
         <Iframe className={ classes.map } 
@@ -22,4 +22,4 @@ const Map = () => {
     </div>
 };
 
-export default Map;
+export default MapTotalCases;
