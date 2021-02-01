@@ -41,7 +41,7 @@ def api_world_stats():
 
 
 @app.route('/api/v2/world', methods=['GET'])
-def api_world_stats_own():
+def api_world_stats_db():
     cursor = cnx.cursor()
     sql = "select sum(population) as 'population', sum(critical) as 'critical', sum(total_cases) as 'cases', " \
           "sum(total_recovered) as 'recovered', sum(total_deaths) as 'deaths', sum(total_tests) as 'tests', " \
@@ -61,9 +61,18 @@ def api_world_stats_own():
     return jsonify(json_db_resp[0])
 
 
+@app.route('/api/v1/country', methods=['GET'])
+def api_country():
+    pass
+
+
+@app.route('/api/v2/country', methods=['GET'])
+def api_country_db():
+    pass
+
+
 @app.route('/api/resources', methods=['GET'])
 def resources():
-    cursor = cnx.cursor()
     f = open("api.json")
     return jsonify(json.load(f))
 
