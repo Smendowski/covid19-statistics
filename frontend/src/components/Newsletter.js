@@ -35,6 +35,15 @@ class Newsletter extends React.Component {
         this.setState({input:input});
   
         alert('Thank you for subscribing to our Newsletter');
+
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 'email': input["email"], 'subscriptions': 5529 })
+      };
+
+      fetch('http://localhost:5000/api/newsletter', requestOptions)
+        .then(response => response.json())
         //TODO: Dodać postowanie danych na endpoint Flaska
     }
   }
