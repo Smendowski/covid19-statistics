@@ -14,6 +14,7 @@ import { withRouter } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginBottom: '2vh',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -31,12 +32,19 @@ const useStyles = makeStyles((theme) => ({
   },
   headerItem: {
       padding: 10,
+      width: '60vw',
       float: 'left',
       marginLeft: 10,
-      marginBottom: '30px'
+      marginBottom: 'auto',
+      marginTop: 'auto',
+      textAlign: 'left'
   },
   navbar: {
       backgroundColor: '#0E0E0E',
+  },
+  button: {
+    marginLeft: "1rem",
+    backgroundColor: "#FFFFFF",
   }
 }));
 
@@ -100,12 +108,14 @@ const Header = props => {
                      onClose={() => setAnchorEl(null)}
                      >
                      <MenuItem onClick={() => handleMenuClick('/global-map')}>Map</MenuItem>
+                     <MenuItem onClick={() => handleMenuClick('/graphs')}>Graphs</MenuItem>
                     </Menu>
                 </>
               ) : (
                 <div className={classes.headerOptions}>
                     <div className={classes.headerItem}>
-                        <Button variant="contained" onClick={() => handleMenuButtonClick('/global-map')}>Map</Button>
+                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/global-map')}>Map</Button>
+                        <Button className={classes.button} variant="contained" onClick={() => handleMenuButtonClick('/graphs')}>Graphs</Button>
                     </div>
                 </div>
                 

@@ -3,6 +3,7 @@ import Header from './components/Header.js'
 import Map from "./components/Map.js"
 import Home from "./components/Home.js"
 import Footer from "./components/Footer.js"
+import Graphs from "./components/Graphs.js"
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Switch>
             <Route exact from="/" render={props => <Home {...props} />} />
             <Route exact from="/global-map" render={props => <Map {...props} />} />
+            <Route exact from="/graphs" render={props => <Graphs {...props} />} />
           </Switch>
           <Footer />
         </BrowserRouter>
