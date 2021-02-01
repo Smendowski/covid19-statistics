@@ -10,16 +10,17 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         border: "0",
+        float: 'left'
     }
 }));
 
-const Graphs = () => {
+const Map = () => {
     const classes = useStyles();
     return <div>
         <Iframe className={ classes.map } 
-            
+            url="http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&from=1609769590748&to=1609791190749&panelId=2"
         />
     </div>
 };
 
-export default Graphs;
+export default Map;

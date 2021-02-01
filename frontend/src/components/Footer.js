@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import FavoriteTwoToneIcon from '@material-ui/icons/FavoriteTwoTone';
+import Newsletter from '../components/Newsletter.js'
 
 function Copyright() {
   return (
@@ -61,6 +62,7 @@ const Footer = () => {
           </Typography>
           <Copyright />
         </Container>
+        <Newsletter />
       </footer>
     </div>
   );
