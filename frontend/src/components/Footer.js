@@ -8,7 +8,7 @@ import Newsletter from '../components/Newsletter.js'
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="white">
+    <Typography variant="body2">
       {'Copyright © '}
       <Link color="inherit" href="https://g01.labagh.pl/">
         Coronavirus COVID-19 statistics
@@ -29,8 +29,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
     backgroundColor: "#141619",
-    position: 'relative',
-    color: 'white'
+    position: 'relative'
   },
   heart: {
     color: "#CB515F",
@@ -48,7 +47,7 @@ const Footer = () => {
     <div className={classes.root}>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body3">
+          <Typography>
             Made with <FavoriteTwoToneIcon className={classes.heart} /> by 
             &nbsp;
             <Link className={classes.gitHubLink} color="inherit" 

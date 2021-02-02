@@ -1,6 +1,4 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import styles from '../App.css';
 
 class Newsletter extends React.Component {
     constructor() {
@@ -27,7 +25,6 @@ class Newsletter extends React.Component {
     event.preventDefault();
   
     if(this.validate()){
-        console.log(this.state);
   
         let input = {};
         input["name"] = "";
@@ -86,35 +83,35 @@ class Newsletter extends React.Component {
         <h5>Coronavirus Newsletter - Subscribe to get more information!</h5>
         <form onSubmit={this.handleSubmit}>
   
-          <div class="form-group">
-            <label for="name">Name:</label>
+          <div className="form-group">
+            <label>Name:</label>
             <input 
               type="text" 
               name="name" 
               value={this.state.input.name}
               onChange={this.handleChange}
-              class="form-control" 
+              className="form-control" 
               placeholder="Enter name" 
               id="name" />
   
               <div className="text-danger">{this.state.errors.name}</div>
           </div>
   
-          <div class="form-group">
-            <label for="email">Email Address:</label>
+          <div className="form-group">
+            <label>Email Address:</label>
             <input 
               type="text" 
               name="email" 
               value={this.state.input.email}
               onChange={this.handleChange}
-              class="form-control" 
+              className="form-control" 
               placeholder="Enter email" 
               id="email" />
    
               <div className="text-danger">{this.state.errors.email}</div>
           </div>
              
-          <input type="submit" value="Submit" class="btn btn-success" />
+          <input type="submit" value="Submit" className="btn btn-success" />
         </form>
       </div>
     );

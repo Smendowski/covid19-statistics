@@ -72,7 +72,7 @@ const Header = props => {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.navbar} position="dynamic">
+      <AppBar className={classes.navbar} position="relative">
         <Toolbar>
           <Button onClick={() => handleMenuButtonClick('/')}>
             <Typography align="left" variant="h4" className={classes.title}>
