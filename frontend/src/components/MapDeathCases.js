@@ -17,7 +17,7 @@ const MapDeathCases = () => {
     const classes = useStyles();
     return <div >
         <Iframe className={classes.map}
-            src="http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=Poland&var-is_admin=false&from=1580571856859&to=1612194256859&panelId=10"
+            src="https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=Poland&var-is_admin=false&from=1580571856859&to=1612194256859&panelId=10"
         />
     </div>
 };

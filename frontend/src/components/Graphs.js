@@ -27,11 +27,11 @@ const Graphs = () => {
     <div>
         <Dropdown options={options} onChange={(e) => {setState(e.value)}} value={defaultOption} placeholder="Select an option" width="200px"/>
 
-        <Iframe className={classes.el} url={`http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=${state}&var-is_admin=false&from=1580571504166&to=1612193904166&panelId=26`}  frameBorder='0' height="300px" width="70%"/>
-        <Iframe className={classes.el} url={`http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=${state}&var-is_admin=false&from=1580571878169&to=1612194278169&panelId=14`}  frameBorder='0' height="300px" width="70%"/>
-        <Iframe className={classes.el} url={`http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571669436&to=1612194069436&panelId=24`} frameBorder='0'  height="300px" width="50%"/>
-        <Iframe className={classes.el} url={`http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571690838&to=1612194090838&panelId=22`}  frameBorder='0'  height="300px" width="50%"/>  
-        <Iframe className={classes.el} url={`http://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571898537&to=1612194298537&panelId=4`} frameBorder='0' height="600px" width="80%"/>
+        <Iframe className={classes.el} url={`https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=${state}&var-is_admin=false&from=1580571504166&to=1612193904166&panelId=26`}  frameBorder='0' height="300px" width="70%"/>
+        <Iframe className={classes.el} url={`https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-Country=${state}&var-is_admin=false&from=1580571878169&to=1612194278169&panelId=14`}  frameBorder='0' height="300px" width="70%"/>
+        <Iframe className={classes.el} url={`https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571669436&to=1612194069436&panelId=24`} frameBorder='0'  height="300px" width="50%"/>
+        <Iframe className={classes.el} url={`https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571690838&to=1612194090838&panelId=22`}  frameBorder='0'  height="300px" width="50%"/>  
+        <Iframe className={classes.el} url={`https://bazy.labagh.pl:3001/d-solo/wF8hSd-Gk/new-dashboard-copy?orgId=1&var-is_admin=false&from=1580571898537&to=1612194298537&panelId=4`} frameBorder='0' height="600px" width="80%"/>
     </div>);
     
 };

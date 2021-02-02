@@ -48,6 +48,7 @@ def api_world_stats_db():
           "sum(total_cases)/(sum(population)/1000000) as 'casesPerOneMillion', sum(total_recovered)/(sum(" \
           "population)/1000000) as 'recoveredPerOneMillion', sum(total_deaths)/(sum(population)/1000000) as " \
           "'deathsPerOneMillion', sum(total_tests)/(sum(population)/1000000) as 'testsPerOneMillion' from regions "
+
     cursor.execute(sql)
 
     row_headers = [x[0] for x in cursor.description]  # we need column names for key-value in json output
@@ -56,6 +57,7 @@ def api_world_stats_db():
     tmp = []
     for item in db_resp[0]:
         tmp.append(float(item))  # by default decimal type is used, so we convert
+
     for result in [tmp]:
         json_db_resp.append(dict(zip(row_headers, result)))
     return jsonify(json_db_resp[0])
@@ -109,7 +111,9 @@ def newsletter_del(p_hash):
 
 @app.route('/api/newsletter', methods=['POST'])
 def newsletter():
+    print("Activated!")
     if request.method == 'POST':
+        print("Activated!")
         email = request.form.get('email')
         subscriptions = request.form.get('subscriptions')
 
