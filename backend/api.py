@@ -124,7 +124,7 @@ def newsletter():
 
 @app.after_request
 def apply_header(response):
-    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 

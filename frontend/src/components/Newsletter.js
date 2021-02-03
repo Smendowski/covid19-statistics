@@ -30,6 +30,7 @@ class Newsletter extends React.Component {
         alert('Thank you for subscribing to our Newsletter');
         const requestOptions = {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Accept': 'application/json'
           },
