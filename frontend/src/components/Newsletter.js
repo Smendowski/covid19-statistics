@@ -37,7 +37,7 @@ class Newsletter extends React.Component {
           body: JSON.stringify({ 'email': this.state.input.email, 'subscriptions': (localStorage.getItem('country') ? localStorage.getItem('country') : 'Poland') })
         }
 
-        fetch('http://g01.labagh.pl:4000/api/newsletter', requestOptions)
+        fetch('https://g01.labagh.pl/api/api/newsletter', requestOptions)
     }
   }
   
