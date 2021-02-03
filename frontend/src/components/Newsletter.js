@@ -4,8 +4,8 @@ class Newsletter extends React.Component {
     constructor() {
     super();
     this.state = {
-      input: {},
-      errors: {}
+      input: {email:"", name:""},
+      errors: {email:"", name:""}
     };
      
     this.handleChange = this.handleChange.bind(this);
@@ -26,22 +26,17 @@ class Newsletter extends React.Component {
   
     if(this.validate()){
   
-        let input = {};
-        input["name"] = "";
-        input["email"] = "";
-        this.setState({input:input});
   
         alert('Thank you for subscribing to our Newsletter');
-
         const requestOptions = {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 'email': input["email"], 'subscriptions': 5529 })
-      };
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ 'email': this.state.input.email, 'subscriptions': (localStorage.getItem('country') ? localStorage.getItem('country') : 'Poland') })
+        }
 
-      fetch('http://localhost:5000/api/newsletter', requestOptions)
-        .then(response => response.json())
-        //TODO: Dodać postowanie danych na endpoint Flaska
+        fetch('http://localhost:5000/api/newsletter', requestOptions)
     }
   }
   

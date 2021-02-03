@@ -5,6 +5,7 @@ import flask
 import mysql.connector
 import requests
 import werkzeug
+import ast
 
 from backend import config
 from flask import request, jsonify
@@ -63,16 +64,6 @@ def api_world_stats_db():
     return jsonify(json_db_resp[0])
 
 
-@app.route('/api/v1/country', methods=['GET'])
-def api_country():
-    pass
-
-
-@app.route('/api/v2/country', methods=['GET'])
-def api_country_db():
-    pass
-
-
 @app.route('/api/resources', methods=['GET'])
 def resources():
     f = open("api.json")
@@ -95,7 +86,7 @@ def newsletter_del(p_hash):
         cursor = cnx.cursor()
 
         sql_verify = "select id from newsletter where hash = %s"
-        cursor.execute(sql_verify,(str(p_hash),))
+        cursor.execute(sql_verify, (str(p_hash),))
         _ = cursor.fetchall()
         if cursor.rowcount == 0:  # there is no such hash
             return 'Invalid parameter!', 404
@@ -111,11 +102,11 @@ def newsletter_del(p_hash):
 
 @app.route('/api/newsletter', methods=['POST'])
 def newsletter():
-    print("Activated!")
     if request.method == 'POST':
-        print("Activated!")
-        email = request.form.get('email')
-        subscriptions = request.form.get('subscriptions')
+        req_data = ast.literal_eval(request.get_data(False, True, True))
+
+        email = req_data["email"]
+        subscriptions = req_data['subscriptions']
 
         # generate hash for unsubscription
         hash_ = ''.join(random.SystemRandom().choice(string.digits + string.ascii_letters) for _ in range(40))
@@ -131,6 +122,10 @@ def newsletter():
     return {"success": "true"}
 
 
+@app.after_request
+def apply_header(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return response
 
 
 @app.errorhandler(werkzeug.exceptions.BadRequest)
