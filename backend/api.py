@@ -7,7 +7,7 @@ import requests
 import werkzeug
 import ast
 
-from backend import config
+import config
 from flask import request, jsonify
 
 # establish DB connection
